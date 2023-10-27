@@ -64,7 +64,7 @@ def training_function(script_args: ScriptArguments, training_args: TrainingArgum
     """
 
     # Load dataset
-    dataset = load_dataset(script_args.dataset_name)
+    dataset = load_dataset(script_args.dataset_name, split="train")
 
     # Load and create PEFT model
     model, peft_config, tokenizer = create_and_prepare_model(
